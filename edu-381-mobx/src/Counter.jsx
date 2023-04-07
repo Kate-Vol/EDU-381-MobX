@@ -3,7 +3,7 @@ import './App.css';
 import {observer} from "mobx-react-lite";
 import counter from "./store/counter";
 
-const Counter = () => {
+const Counter = observer(() => {
   return (
     <div className='counter'>
       {"Count = " + counter.count}
@@ -13,5 +13,5 @@ const Counter = () => {
       </div>
     </div>
   );
-}
+})
 export default Counter;
